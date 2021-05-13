@@ -58,3 +58,25 @@ export default function App() {
     </Router>
   );
 }
+
+function Home() {
+  return <h1>Home</h1>;
+}
+
+function Friends(props) {
+  const { names } = props;
+  console.log(names);
+  return (
+    <div>
+      <ul>
+        {names.map((friend, index) => (
+          <li key={index}>{friend}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Posts() {
+  return <h2>Posts</h2>;
+}
